@@ -24,13 +24,13 @@ jobs:
       id: cache
       with:
         path: ~/local/rubies
-        key: ruby-2.5.7
+        key: ruby-2.6.4
 
-    - name: Set up Ruby 2.5.7
+    - name: Set up Ruby 2.6.4
       uses: clupprich/ruby-build-action@master
       id: ruby
       with:
-        ruby-version: 2.5.7
+        ruby-version: 2.6.4
         cache-available: ${{ steps.cache.outputs.cache-hit == 'true' }}
 
     - name: Print ruby version
