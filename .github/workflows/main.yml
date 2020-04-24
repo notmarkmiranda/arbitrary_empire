@@ -56,6 +56,6 @@ jobs:
         PGUSER: postgres
         RAILS_ENV: test
       run: |
-        gem install bundler -v 1.17.3
+        gem install bundler -v 2.1.4
         bundle install --jobs 4 --retry 3
         bundle exec rspec spec
