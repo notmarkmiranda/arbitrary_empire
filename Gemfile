@@ -13,6 +13,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'standardrb'
 gem 'devise'
+gem 'skeleton-rails', :git => 'https://github.com/helios-technologies/skeleton-rails'
 
 group :development, :test do
   gem 'factory_bot_rails'
