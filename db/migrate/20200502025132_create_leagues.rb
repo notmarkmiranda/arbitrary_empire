@@ -4,7 +4,7 @@ class CreateLeagues < ActiveRecord::Migration[6.0]
       t.string :name
       t.references :user, null: false, foreign_key: true
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
