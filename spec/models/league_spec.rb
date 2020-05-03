@@ -1,16 +1,16 @@
-require 'rails_helper'
+require "rails_helper"
 
 describe League, type: :model do
-  describe 'relationships' do
+  describe "relationships" do
     it { should belong_to :owner }
     it { should have_many :memberships }
   end
 
-  describe 'validations' do
+  describe "validations" do
     before { create(:league) }
 
     it { should validate_uniqueness_of :name }
   end
 
-  describe 'methods'
+  describe "methods"
 end

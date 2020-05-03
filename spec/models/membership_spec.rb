@@ -1,17 +1,17 @@
-require 'rails_helper'
+require "rails_helper"
 
 describe Membership, type: :model do
-  describe 'validations' do
+  describe "validations" do
     before { create(:membership) }
 
     it { should validate_uniqueness_of(:league_id).scoped_to(:user_id) }
     it { should define_enum_for(:role) }
   end
 
-  describe 'relationships' do
+  describe "relationships" do
     it { should belong_to(:league) }
     it { should belong_to(:user) }
   end
 
-  describe 'models'
+  describe "models"
 end

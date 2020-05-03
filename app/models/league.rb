@@ -1,5 +1,5 @@
 class League < ApplicationRecord
-  belongs_to :owner, class_name: 'User', foreign_key: :user_id
+  belongs_to :owner, class_name: "User", foreign_key: :user_id
   has_many :memberships
 
   validates :name, uniqueness: true
