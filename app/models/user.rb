@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :leagues
+  has_many :owned_leagues, class_name: 'League', foreign_key: 'user_id'
+  has_many :memberships
 end

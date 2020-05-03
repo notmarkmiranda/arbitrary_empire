@@ -3,5 +3,3 @@ user.password = 'password'
 user.save!
 
 puts "#{user.email} was created!"
-
-

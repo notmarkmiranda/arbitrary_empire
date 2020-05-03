@@ -6,7 +6,8 @@ describe User, type: :model do
   end
 
   describe 'relationships' do
-    it { should have_many :leagues }
+    it { should have_many :owned_leagues }
+    it { should have_many :memberships }
   end
 
   describe 'methods'
