@@ -1,10 +1,10 @@
-require 'rails_helper'
+require "rails_helper"
 
 describe HomeController, type: :request do
-  describe 'GET#index' do
+  describe "GET#index" do
     subject(:get_index) { get root_path }
 
-    it 'should have 200 status' do
+    it "should have 200 status" do
       get_index
 
       expect(response).to have_http_status(200)
