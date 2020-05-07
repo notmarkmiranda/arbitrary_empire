@@ -1,0 +1,14 @@
+<%= form_with model: @pool do |f| %>
+  <%= f.hidden_field :league_id, value: params[:league_id] %>
+  
+  <%= f.label :name, "Pool Name" %>
+  <%= f.text_field :name %>
+
+  <%= f.label :bet_cut_off_time %>
+  <%= f.datetime_field :bet_cut_off_time %>
+
+  <%= f.label :end_time %>
+  <%= f.datetime_field :end_time %>
+
+  <%= f.submit "Create Pool" %>
+<% end %>

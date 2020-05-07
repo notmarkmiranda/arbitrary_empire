@@ -4,4 +4,5 @@ class Pool < ApplicationRecord
   validates_presence_of :end_time
 
   belongs_to :league
+  belongs_to :user
 end
