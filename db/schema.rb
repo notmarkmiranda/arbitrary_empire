@@ -38,9 +38,11 @@ ActiveRecord::Schema.define(version: 2020_05_03_224131) do
     t.string "name"
     t.datetime "bet_cut_off_time"
     t.datetime "end_time"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["league_id"], name: "index_pools_on_league_id"
+    t.index ["user_id"], name: "index_pools_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,4 +61,5 @@ ActiveRecord::Schema.define(version: 2020_05_03_224131) do
   add_foreign_key "memberships", "leagues"
   add_foreign_key "memberships", "users"
   add_foreign_key "pools", "leagues"
+  add_foreign_key "pools", "users"
 end

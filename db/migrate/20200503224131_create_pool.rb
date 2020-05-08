@@ -5,6 +5,7 @@ class CreatePool < ActiveRecord::Migration[6.0]
       t.string :name
       t.datetime :bet_cut_off_time
       t.datetime :end_time
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps null: false
     end

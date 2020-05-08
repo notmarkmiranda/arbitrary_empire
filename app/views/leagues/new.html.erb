@@ -1,5 +1,17 @@
-<%= form_with model: @league do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit 'Create League' %>
-<% end %>
+<div class="row">
+  <div class="centered-container">
+    <div class="one-third column">
+      <div class="cards">
+        <%= form_with model: @league do |f| %>
+          <div class="field">
+            <%= f.label :name, "League Name" %>
+            <%= f.text_field :name, class: "u-full-width" %>
+          </div>
+          <div class="actions">
+            <%= f.submit 'Create League', class: "u-full-width" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

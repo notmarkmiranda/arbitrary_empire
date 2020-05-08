@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :owned_leagues, class_name: "League", foreign_key: "user_id"
   has_many :memberships
+  has_many :pools
 end
